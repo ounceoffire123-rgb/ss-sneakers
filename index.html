@@ -1,135 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SS Sneakers • Catálogo Premium</title>
-  <meta name="description" content="SS Sneakers • Catálogo Premium: selecione a marca, pesquise o modelo e chame no WhatsApp." />
-  <link rel="icon" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <title>SS Sneakers</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- fundo cósmico (camadas) -->
-  <div class="cosmos" aria-hidden="true"></div>
 
-  <!-- TOPBAR -->
-  <header class="topbar" id="top">
-    <div class="wrap topbar__inner">
-      <div class="brand">
-        <img class="brand__logo" src="assets/images/logo.png" alt="SS Sneakers" />
-        <div class="brand__text">
-          <div class="brand__name">SS Sneakers</div>
-          <div class="brand__tag">Exclusividade • Sofisticação • Premium</div>
-        </div>
-      </div>
+<header class="topo">
+  <div class="logo">
+    <div class="logo-circle">SS</div>
+    <div>
+      <h1>SS Sneakers</h1>
+      <span>Exclusividade - Sofisticação - Premium</span>
+    </div>
+  </div>
 
-      <div class="topbar__actions">
-        <a class="iconBtn" id="igTop" href="#" target="_blank" rel="noopener" aria-label="Instagram">
-          <span class="igIcon" aria-hidden="true"></span>
-        </a>
-        <a class="btn btn--wa" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn-whats">WhatsApp</a>
+</header>
+
+<section class="hero">
+  <div class="hero-box">
+
+    <div class="hero-left">
+      <h2>Catálogo Premium.</h2>
+      <p>
+        Encontre sua marca e o modelo ideal. Veja o valor e a numeração do anúncio.
+        Atendimento direto via WhatsApp.
+      </p>
+
+      <div class="hero-tags">
+        <span>Marcas selecionadas</span>
+        <span>Preço no catálogo</span>
+        <span>Atendimento rápido</span>
       </div>
     </div>
-    <div class="topbar__line"></div>
-  </header>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero__frame">
-        <div class="hero__card">
-          <div class="hero__left">
-            <h1 class="hero__title">Colálogo Premium </h1>
-            <p class="hero__desc">
-              Modelos selecionados das principais grifes internacionais.
-              Atendimento personalizado via WhatsApp/Instagram.
-            </p>
-
-            <div class="chips">
-              <span class="chip">Marcas selecionadas</span>
-              <span class="chip">Preço no catálogo</span>
-              <span class="chip">Atendimento rápido</span>
-            </div>
-          </div>
-
-          <div class="hero__right">
-            <div class="field">
-              <label class="label" for="search">Buscar modelo</label>
-              <div class="inputWrap">
-                <input id="search" class="input" type="search" placeholder="Ex: Air Force, 9060, Samba, Ultraboost..." autocomplete="off" />
-                <span class="chev" aria-hidden="true"></span>
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label" for="brandFilter">Marca</label>
-              <div class="selectWrap">
-                <select id="brandFilter" class="select">
-                  <option value="all">Todas</option>
-                </select>
-                <span class="chev" aria-hidden="true"></span>
-              </div>
-            </div>
-
-            <div class="meta" id="meta"></div>
-
-            <div class="notice">
-              <span class="dot" aria-hidden="true"></span>
-              <span>Disponibilidade de numeração confirmada no atendimento.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MARCAS (BOTÕES DOURADOS) -->
-    <section class="brands">
-      <div class="brands__title">Marcas</div>
-      <div class="brands__row" id="brandPills"></div>
-    </section>
-
-    <!-- CATÁLOGO -->
-    <section class="catalog">
-      <div id="sections"></div>
-
-      <div class="empty hidden" id="empty">
-        Nenhum modelo encontrado.
-      </div>
-    </section>
-  </main>
-
-  <!-- FABs -->
-  <a class="fab fab--wa" id="waFab" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
-  <a class="fab fab--ig" id="igFab" href="#" target="_blank" rel="noopener" aria-label="Instagram">
-    <span class="igMini" aria-hidden="true"></span>
-  </a>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <div>© <span id="year"></span> SS Sneakers</div>
-      <div class="footer__note">Catálogo e valores • Atendimento via WhatsApp</div>
+    <div class="hero-right">
+      <input type="text" placeholder="Ex: Air Force, 9060, Samba, Ultraboost...">
+      <select>
+        <option>Todas</option>
+        <option>Nike</option>
+        <option>Adidas</option>
+      </select>
+      <small>Disponibilidade de numeração confirmada no atendimento.</small>
     </div>
-  </footer>
 
-  <script>
-    // suas marcas (mantém igual)
-    window.SS_BRANDS = [
-      "Adidas",
-      "Dolce & Gabbana",
-      "Gucci",
-      "Louis Vuitton",
-      "New Balance",
-      "Nike",
-      "Oakley",
-      "Puma",
-      "Chinelos",
-      "Chuteiras"
-    ];
-  </script>
+  </div>
+</section>
 
-  <!-- seu JS de produtos (não mexe) -->
-  <script src="app.js"></script>
+<section class="marcas">
+  <h3>Marcas</h3>
+
+  <div class="marcas-lista">
+    <span class="ativo">Todas</span>
+    <span>Adidas</span>
+    <span>Dolce & Gabbana</span>
+    <span>Gucci</span>
+    <span>Louis Vuitton</span>
+    <span>New Balance</span>
+    <span>Nike</span>
+    <span>Oakley</span>
+  </div>
+</section>
+
 </body>
 </html>
-
