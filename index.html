@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SS Sneakers • Catálogo</title>
+  <meta name="description" content="Catálogo SS Sneakers: preços e numeração. Compra via WhatsApp e Instagram." />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <img class="brand__logo" src="assets/images/logo.png" alt="SS Sneakers" />
+        <div class="brand__text">
+          <div class="brand__name">SS Sneakers</div>
+          <div class="brand__tag">Premium • 1ª linha • Catálogo com preços</div>
+        </div>
+      </div>
+
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" id="igTop" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn btn--primary" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero__card">
+        <div class="hero__left">
+          <h1>Escolha seu tênis. Veja o preço. Chame e feche.</h1>
+          <p>
+            Navegue por marca, pesquise o modelo e veja numeração e valores. Depois é só chamar no WhatsApp
+            para confirmar disponibilidade e finalizar.
+          </p>
+          <div class="hero__chips">
+            <span class="chip">Preço visível</span>
+            <span class="chip">Numeração no anúncio</span>
+            <span class="chip">Compra via WhatsApp/Instagram</span>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="controls">
+            <div class="field">
+              <label for="search">Buscar</label>
+              <input id="search" class="input" type="search" placeholder="Ex: Air Force, Ultraboost, 9060..." autocomplete="off" />
+            </div>
+
+            <div class="field">
+              <label for="brandFilter">Marca</label>
+              <select id="brandFilter" class="select">
+                <option value="all">Todas</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="meta" id="meta"></div>
+
+          <div class="notice">
+            <span class="dot"></span>
+            <span><b>Obs:</b> disponibilidade de numeração é confirmada no atendimento.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="brandnav" aria-label="Marcas">
+      <div class="brandnav__title">Marcas</div>
+      <div class="brandnav__row" id="brandPills"></div>
+    </section>
+
+    <section class="catalog">
+      <div id="sections"></div>
+      <div class="empty hidden" id="empty">
+        Nenhum produto encontrado. Tente outra busca ou selecione outra marca.
+      </div>
+    </section>
+  </main>
+
+  <a class="fab fab--ig" id="igFab" href="#" target="_blank" rel="noopener" aria-label="Instagram">
+    IG
+  </a>
+  <a class="fab fab--wa" id="waFab" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    WA
+  </a>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div>© <span id="year"></span> SS Sneakers</div>
+      <div class="footer__note">Catálogo e valores • Atendimento via WhatsApp</div>
+    </div>
+  </footer>
+
+  <script>
+    window.SS_BRANDS = ["Adidas", "Dolce & Gabbana", "Gucci", "Louis Vuitton", "New Balance", "Nike", "Oakley", "Puma", "Chinelos", "Chuteiras"];
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
