@@ -435,3 +435,33 @@ a{color:inherit;text-decoration:none}
 @media (max-width: 520px){
   .pill{ padding: 11px 15px; font-size: 13px; }
 }
+#brandPills > *:hover{
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.55),
+    0 0 0 1px rgba(231,195,112,.16),
+    0 0 26px rgba(231,195,112,.16) !important;
+}
+
+#brandPills > *::after{
+  filter: blur(16px) !important;
+}
+#brandPills > *{
+  transition: transform .26s cubic-bezier(.2,.8,.2,1),
+              box-shadow .26s ease,
+              border-color .26s ease,
+              background .26s ease,
+              color .26s ease !important;
+}
+
+#brandPills > *:hover{
+  transform: translateY(-1px) scale(1.01) !important;
+}
+#brandPills > *.active,
+#brandPills > *.is-active,
+#brandPills > *[aria-current="true"]{
+  background: linear-gradient(135deg, rgba(231,195,112,.95), rgba(183,138,58,.88)) !important;
+  color: #0b0c10 !important;
+  box-shadow:
+    0 14px 40px rgba(0,0,0,.55),
+    0 0 30px rgba(231,195,112,.18) !important;
+}
