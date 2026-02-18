@@ -1,93 +1,93 @@
-/* ===== HERO LUXO (override) ===== */
-.hero{
-  padding: 28px 0 10px;
-}
-.hero__inner{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 26px 28px;
-  border-radius: 22px;
-  background: linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-  border: 1px solid rgba(231,195,112,.18);
-  box-shadow: 0 18px 60px rgba(0,0,0,.55);
-  backdrop-filter: blur(10px);
-}
-.hero__inner h1{
-  margin: 0 0 8px;
-  font-size: 34px;
-  letter-spacing: -.5px;
-}
-.hero__inner p{
-  margin: 0 0 18px;
-  color: rgba(243,244,246,.78);
-  line-height: 1.5;
-  max-width: 62ch;
-}
 
-/* Busca bonita */
-.hero__search{
-  display: grid;
-  grid-template-columns: 1.4fr .8fr;
-  gap: 14px;
-  align-items: end;
-}
-.hero__search .field{
-  display:flex;
-  flex-direction:column;
-  gap: 8px;
-}
-.hero__search .field span{
-  font-size: 12px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(231,195,112,.9);
-}
-.hero__search input,
-.hero__search select{
-  width: 100%;
-  height: 46px;
-  border-radius: 14px;
-  padding: 0 14px;
-  background: rgba(10,14,20,.55);
-  border: 1px solid rgba(231,195,112,.22);
-  color: #f3f4f6;
-  outline: none;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.25);
-}
-.hero__search input::placeholder{
-  color: rgba(243,244,246,.45);
-}
-.hero__search input:focus,
-.hero__search select:focus{
-  border-color: rgba(231,195,112,.55);
-  box-shadow: 0 0 0 4px rgba(231,195,112,.12);
-}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SS Sneakers • Catálogo Premium</title>
+  <meta name="description" content="SS Sneakers — Seleção exclusiva de sneakers premium. Compra via WhatsApp e Instagram." />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-/* Linha pequena de status */
-.hero__hint{
-  grid-column: 1 / -1;
-  display:flex;
-  gap: 10px;
-  align-items:center;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: rgba(0,0,0,.25);
-  border: 1px solid rgba(255,255,255,.08);
-  color: rgba(243,244,246,.75);
-  font-size: 13px;
-}
-.hero__hint .dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(231,195,112,.95);
-  box-shadow: 0 0 0 6px rgba(231,195,112,.14);
-}
+<body>
 
-/* Mobile */
-@media (max-width: 720px){
-  .hero__inner{ padding: 18px 16px; }
-  .hero__inner h1{ font-size: 26px; }
-  .hero__search{ grid-template-columns: 1fr; }
-}
+  <!-- ===== TOPO ===== -->
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <img class="brand__logo" src="assets/images/logo.png" alt="SS Sneakers" />
+        <div class="brand__text">
+          <div class="brand__name">SS Sneakers</div>
+          <div class="brand__tag">Exclusividade • Sofisticação • Premium</div>
+        </div>
+      </div>
 
+      <div class="topbar__actions">
+        <a class="btn btn--ghost" id="igTop" href="#" target="_blank">Instagram</a>
+        <a class="btn btn--primary" id="waTop" href="#" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ===== HERO LUXO ===== -->
+  <main class="wrap">
+
+    <section class="hero">
+      <div class="hero__inner">
+
+        <h1>Exclusividade em cada detalhe.</h1>
+        <p>
+          Seleção exclusiva de modelos premium das principais marcas internacionais.
+          Atendimento VIP direto via WhatsApp.
+        </p>
+
+        <!-- BUSCA -->
+        <div class="hero__search">
+
+          <div class="field">
+            <span>Buscar modelo</span>
+            <input id="search" type="search"
+              placeholder="Ex: Air Force, Ultraboost, 9060..."
+              autocomplete="off" />
+          </div>
+
+          <div class="field">
+            <span>Marca</span>
+            <select id="brandFilter">
+              <option value="all">Todas</option>
+            </select>
+          </div>
+
+          <div class="hero__hint">
+            <div class="dot"></div>
+            <div>Disponibilidade de numeração confirmada no atendimento.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== MARCAS ===== -->
+    <section class="brandnav">
+      <div class="brandnav__title">Marcas</div>
+      <div class="brandnav__row" id="brandPills"></div>
+    </section>
+
+
+    <!-- ===== CATÁLOGO ===== -->
+    <section class="catalog">
+      <div id="sections"></div>
+      <div class="empty hidden" id="empty">
+        Nenhum modelo encontrado.
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- BOTÕES FLUTUANTES -->
+  <a class="fab fab--ig" id="igFab" href="#" target="_blank">IG</a>
+  <a class="fab fab--wa" id="waFab" hr
