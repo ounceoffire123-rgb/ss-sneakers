@@ -28,7 +28,6 @@
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-   background:red !important;
   background: radial-gradient(1200px 520px at 18% -10%, rgba(242,199,107,.10), transparent 60%),
               radial-gradient(900px 520px at 88% 8%, rgba(120,70,10,.16), transparent 55%),
               linear-gradient(180deg, var(--bg), var(--bg2));
@@ -475,4 +474,231 @@ a{color:inherit;text-decoration:none}
   .brand__logo{width:58px;height:58px;border-radius:16px}
   .hero__left h1{font-size:30px}
   .grid{grid-template-columns: 1fr}
+}
+/* ============================
+   LUXO CÓSMICO (COLAR NO FINAL)
+   ============================ */
+
+:root{
+  --lux-gold1:#f7d88a;
+  --lux-gold2:#e7c370;
+  --lux-gold3:#c99a3a;
+  --lux-ink:#07070b;
+  --lux-ink2:#0b0c12;
+  --lux-card:rgba(18,19,26,.62);
+  --lux-line:rgba(231,195,112,.22);
+  --lux-glow:rgba(231,195,112,.35);
+}
+
+html, body { height: 100%; }
+
+body{
+  background: var(--lux-ink);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* camadas "cosmo" */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(1200px 700px at 18% 12%, rgba(231,195,112,.18), transparent 60%),
+    radial-gradient(900px 560px at 78% 14%, rgba(255,214,140,.10), transparent 55%),
+    radial-gradient(1100px 800px at 70% 82%, rgba(17,88,180,.10), transparent 62%),
+    radial-gradient(900px 700px at 28% 88%, rgba(0,0,0,.55), transparent 60%),
+    linear-gradient(180deg, #05060a 0%, #07070b 35%, #07070b 100%);
+  filter: saturate(1.05);
+}
+
+/* poeira/estrelas + brilho dourado */
+body::after{
+  content:"";
+  position: fixed;
+  inset:-20%;
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255,220,160,.20), transparent 35%),
+    radial-gradient(circle at 78% 30%, rgba(231,195,112,.14), transparent 40%),
+    radial-gradient(circle at 40% 78%, rgba(231,195,112,.10), transparent 45%),
+    radial-gradient(circle at 66% 88%, rgba(255,210,140,.08), transparent 46%),
+    radial-gradient(circle at 12% 65%, rgba(255,255,255,.06), transparent 35%),
+    radial-gradient(circle at 55% 45%, rgba(255,255,255,.05), transparent 35%),
+    radial-gradient(circle at 85% 70%, rgba(255,255,255,.04), transparent 35%);
+  filter: blur(0.2px);
+  opacity: .9;
+  transform: translateZ(0);
+}
+
+/* Topbar mais “boutique” */
+.topbar{
+  background: rgba(7,8,12,.58) !important;
+  backdrop-filter: blur(16px) saturate(1.1);
+  border-bottom: 1px solid rgba(231,195,112,.18) !important;
+  box-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+
+/* Logo com aura (sem quadrado feio) */
+.brand__logo{
+  width: 92px !important;
+  height: 92px !important;
+  object-fit: contain;
+  border-radius: 999px !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  filter: drop-shadow(0 0 18px rgba(231,195,112,.28))
+          drop-shadow(0 0 36px rgba(231,195,112,.18));
+}
+
+/* Card principal (hero) com borda dourada + brilho */
+.hero__card, .hero__card *{
+  -webkit-font-smoothing: antialiased;
+}
+.hero__card{
+  background: var(--lux-card) !important;
+  border: 1px solid rgba(231,195,112,.18) !important;
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.55),
+    0 0 0 1px rgba(231,195,112,.06) inset;
+  position: relative;
+  overflow: hidden;
+}
+.hero__card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:
+    radial-gradient(900px 420px at 30% 30%, rgba(231,195,112,.16), transparent 60%),
+    radial-gradient(900px 420px at 82% 32%, rgba(255,214,140,.10), transparent 60%);
+  filter: blur(1px);
+  opacity: .9;
+  pointer-events:none;
+}
+.hero__card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 1px rgba(231,195,112,.10) inset, 0 0 42px rgba(231,195,112,.08);
+  pointer-events:none;
+}
+
+/* Inputs/select com cara premium */
+.input, .select{
+  background: rgba(10,11,16,.55) !important;
+  border: 1px solid rgba(231,195,112,.16) !important;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.55) inset;
+}
+.input:focus, .select:focus{
+  outline: none !important;
+  border-color: rgba(231,195,112,.42) !important;
+  box-shadow:
+    0 0 0 3px rgba(231,195,112,.12),
+    0 0 28px rgba(231,195,112,.12);
+}
+
+/* Botões topo (Instagram/WhatsApp) com brilho suave */
+.btn{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, opacity .18s ease;
+}
+.btn--primary{
+  background: linear-gradient(135deg, var(--lux-gold1), var(--lux-gold2)) !important;
+  color: #15120a !important;
+  box-shadow: 0 10px 30px rgba(231,195,112,.16);
+}
+.btn--primary:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 38px rgba(231,195,112,.22), 0 0 24px rgba(231,195,112,.18);
+}
+.btn--ghost{
+  border: 1px solid rgba(231,195,112,.20) !important;
+  background: rgba(10,11,16,.35) !important;
+}
+.btn--ghost:hover{
+  transform: translateY(-1px);
+  border-color: rgba(231,195,112,.36) !important;
+  box-shadow: 0 0 22px rgba(231,195,112,.12);
+}
+
+/* ============================
+   MARCAS: botões dourados + glow
+   (vale para vários nomes de classe)
+   ============================ */
+#brandPills button,
+#brandPills a,
+.brandnav__row button,
+.brandnav__row a,
+.brandnav__row .pill,
+.brandnav__row .brandpill{
+  border-radius: 999px !important;
+  border: 1px solid rgba(231,195,112,.24) !important;
+  background: rgba(12,13,18,.50) !important;
+  color: rgba(245,245,245,.92) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease, color .18s ease;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.55) inset;
+}
+
+/* brilho interno */
+#brandPills button::before,
+#brandPills a::before,
+.brandnav__row button::before,
+.brandnav__row a::before,
+.brandnav__row .pill::before,
+.brandnav__row .brandpill::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(231,195,112,.30), transparent 40%),
+    radial-gradient(circle at 70% 70%, rgba(255,214,140,.18), transparent 42%);
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+
+/* hover = “glow” */
+#brandPills button:hover,
+#brandPills a:hover,
+.brandnav__row button:hover,
+.brandnav__row a:hover,
+.brandnav__row .pill:hover,
+.brandnav__row .brandpill:hover{
+  transform: translateY(-1px);
+  border-color: rgba(231,195,112,.55) !important;
+  box-shadow:
+    0 10px 26px rgba(0,0,0,.40),
+    0 0 26px rgba(231,195,112,.18),
+    0 0 42px rgba(231,195,112,.12);
+}
+#brandPills button:hover::before,
+#brandPills a:hover::before,
+.brandnav__row button:hover::before,
+.brandnav__row a:hover::before,
+.brandnav__row .pill:hover::before,
+.brandnav__row .brandpill:hover::before{
+  opacity: 1;
+}
+
+/* “ativo/selecionado” (se seu JS usa .active) */
+#brandPills .active,
+.brandnav__row .active{
+  background: linear-gradient(135deg, rgba(247,216,138,.20), rgba(231,195,112,.08)) !important;
+  border-color: rgba(231,195,112,.60) !important;
+  box-shadow: 0 0 30px rgba(231,195,112,.18), 0 0 50px rgba(231,195,112,.10);
+}
+
+/* FABs (WA/IG) mais premium */
+.fab{
+  border: 1px solid rgba(231,195,112,.22) !important;
+  background: rgba(12,13,18,.55) !important;
+  box-shadow: 0 14px 40px rgba(0,0,0,.45), 0 0 22px rgba(231,195,112,.12);
+}
+.fab:hover{
+  box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 0 34px rgba(231,195,112,.18);
+  transform: translateY(-1px);
 }
