@@ -352,3 +352,86 @@ a{color:inherit;text-decoration:none}
   .hero__inner h1{ font-size: 26px; }
   .hero__search{ grid-template-columns: 1fr; }
 }
+/* ================================
+   LUXO CÓSMICO — Marcas (Pills)
+   Cole no FINAL do styles.css
+================================= */
+
+.brandnav { margin-top: 22px; }
+.brandnav__title{
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.92);
+  margin-bottom: 12px;
+}
+.brandnav__row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* Botão da marca */
+.pill{
+  position: relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor:pointer;
+  user-select:none;
+
+  /* base escura “boutique” */
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(231,195,112,.22);
+  color: rgba(255,255,255,.92);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: .02em;
+
+  /* animação suave */
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease, color .18s ease;
+  will-change: transform, box-shadow;
+  backdrop-filter: blur(10px);
+}
+
+/* Brilho externo (glow) controlado */
+.pill::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: inherit;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(231,195,112,.28), transparent 60%);
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity .18s ease;
+  pointer-events:none;
+}
+
+.pill:hover{
+  transform: translateY(-2px);
+  border-color: rgba(231,195,112,.55);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.45),
+    0 0 0 1px rgba(231,195,112,.18),
+    0 0 34px rgba(231,195,112,.18);
+  background: linear-gradient(180deg, rgba(231,195,112,.12), rgba(255,255,255,.02));
+}
+.pill:hover::after{ opacity: 1; }
+
+/* Selecionado (marca ativa) */
+.pill.is-active{
+  color: #0b0c10;
+  border-color: rgba(231,195,112,.9);
+  background: linear-gradient(135deg, rgba(231,195,112,.95), rgba(183,138,58,.92));
+  box-shadow:
+    0 14px 40px rgba(0,0,0,.55),
+    0 0 40px rgba(231,195,112,.22);
+}
+.pill.is-active::after{ opacity: 1; }
+
+/* Mobile: pills mais “tocáveis” */
+@media (max-width: 520px){
+  .pill{ padding: 11px 15px; font-size: 13px; }
+}
