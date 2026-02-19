@@ -92,7 +92,10 @@
     const title = `${p.brand} ${p.name}`.trim();
     const sizes = p.sizes || "";
     const price = formatBRL(p.price);
-    const img = p.image || "assets/images/placeholder.svg";
+    const images = extractImages(p);
+const fallback = "assets/images/placeholder.svg";
+const safeImages = (images.length ? images : [fallback]);
+;
     const desc = p.description || "";
 
     const msg =
@@ -105,8 +108,11 @@
     const el = document.createElement("article");
     el.className = "card";
     el.innerHTML = `
-      <img class="card__img" src="${img}" alt="${title}" loading="lazy" onerror="this.src='assets/images/placeholder.svg'">
-      <div class="card__body">
+  <div class="card__media">
+    ${carouselHTML(safeImages, title)}
+  </div>
+  <div class="card__body">
+
         <div class="badge">${p.brand}</div>
         <h3 class="card__title">${p.name}</h3>
         <p class="card__meta">Numeração: <b>${sizes || "—"}</b></p>
@@ -191,6 +197,8 @@
       x.classList.toggle("pill--active", x.textContent === selected || (selected === "all" && x.textContent === "Todas"));
     });
   };
+    // ativa carrosseis (depois de renderizar os cards)
+    mountCarousels(document);
 
   const initLinks = () => {
     // WhatsApp
