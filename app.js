@@ -277,3 +277,84 @@ function extractImages(product){
   // remove duplicadas
   return [...new Set(imgs)];
 }
+function carouselHTML(images, altText=""){
+  const safeAlt = (altText || "").replaceAll('"', "'");
+
+  const slides = images.map((src, idx) => `
+    <div class="carousel__slide" data-idx="${idx}">
+      <img src="${src}" alt="${safeAlt} • foto ${idx+1}" loading="lazy">
+    </div>
+  `).join("");
+
+  const dots = images.map((_, idx) => `
+    <button class="carousel__dot ${idx===0 ? "is-active" : ""}" type="button" data-dot="${idx}" aria-label="Ir para foto ${idx+1}"></button>
+  `).join("");
+
+  const singleClass = images.length <= 1 ? "is-single" : "";
+
+  return `
+    <div class="carousel ${singleClass}">
+      <div class="carousel__track" data-track>
+        ${slides}
+      </div>
+
+      <div class="carousel__nav">
+        <button class="carousel__btn carousel__btn--prev" type="button" data-prev aria-label="Foto anterior">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="carousel__btn carousel__btn--next" type="button" data-next aria-label="Próxima foto">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="carousel__dots" data-dots>
+        ${dots}
+      </div>
+    </div>
+  `;
+}
+function mountCarousels(root=document){
+  const carousels = root.querySelectorAll(".carousel");
+
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector("[data-track]");
+    if(!track) return;
+
+    const slides = Array.from(track.children);
+    const dotsWrap = carousel.querySelector("[data-dots]");
+    const dots = dotsWrap ? Array.from(dotsWrap.querySelectorAll(".carousel__dot")) : [];
+    let index = 0;
+
+    const goTo = (i) => {
+      index = Math.max(0, Math.min(i, slides.length - 1));
+      const x = slides[index].offsetLeft;
+      track.scrollTo({ left: x, behavior: "smooth" });
+
+      dots.forEach((d, di) => d.classList.toggle("is-active", di === index));
+    };
+
+    carousel.querySelector("[data-prev]")?.addEventListener("click", () => goTo(index - 1));
+    carousel.querySelector("[data-next]")?.addEventListener("click", () => goTo(index + 1));
+
+    dots.forEach(d => {
+      d.addEventListener("click", () => goTo(parseInt(d.dataset.dot, 10)));
+    });
+
+    // atualiza bolinha quando o usuário arrasta no scroll
+    let raf = null;
+    track.addEventListener("scroll", () => {
+      if(raf) cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        // acha slide mais próximo do scroll atual
+        const left = track.scrollLeft;
+        let best = 0, bestDist = Infinity;
+        slides.forEach((s, i) => {
+          const dist = Math.abs(s.offsetLeft - left);
+          if(dist < bestDist){ bestDist = dist; best = i; }
+        });
+        index = best;
+        dots.forEach((d, di) => d.classList.toggle("is-active", di === index));
+      });
+    });
+  });
+}
