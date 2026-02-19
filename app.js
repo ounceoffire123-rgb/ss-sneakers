@@ -245,3 +245,35 @@
     els.meta.textContent = "Erro ao carregar o catálogo. Verifique products.json.";
   });
 })();
+function normalizeImagePath(p){
+  if(!p) return null;
+  let s = String(p).trim();
+
+  // troca \ por /
+  s = s.replaceAll("\\", "/");
+
+  // se não tiver extensão, assume .jpeg
+  if(!/\.(png|jpg|jpeg|webp)$/i.test(s)) s += ".jpeg";
+
+  return s;
+}
+
+function extractImages(product){
+  // tenta ler image1..image9 (seu excel)
+  const imgs = [];
+  for(let i=1;i<=9;i++){
+    const key = "image"+i;
+    if(product[key]){
+      const norm = normalizeImagePath(product[key]);
+      if(norm) imgs.push(norm);
+    }
+  }
+
+  // se você já tiver product.images, também funciona:
+  if(Array.isArray(product.images) && product.images.length){
+    return product.images.map(normalizeImagePath).filter(Boolean);
+  }
+
+  // remove duplicadas
+  return [...new Set(imgs)];
+}
