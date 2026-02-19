@@ -1,0 +1,333 @@
+[
+  {
+    "brand": "Adidas",
+    "name": "2000 Premium",
+    "price": 230,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-2000Premium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-2000Premium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-2000Premium-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-2000Premium-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-2000Premium-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-2000Premium-image6.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "33Y Fashion",
+    "price": 175,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-33YFashion-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-33YFashion-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-33YFashion-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-33YFashion-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-33YFashion-image5.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "4D Premium",
+    "price": 310,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-4DPremium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-4DPremium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-4DPremium-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-4DPremium-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-4DPremium-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-4DPremium-image6.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "4D",
+    "price": 180,
+    "sizes": "35 ao 43",
+    "image1": "assets/images/Adidas/Adidas-4D-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-4D-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-4D-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-4D-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-4D-image5.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Ad2000",
+    "price": 220,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-Ad2000-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-Ad2000-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-Ad2000-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "AD2000 Premium",
+    "price": 290,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-AD2000Premium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-AD2000Premium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-AD2000Premium-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-AD2000Premium-image4.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adimatic",
+    "price": 180,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-Adimatic-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-Adimatic-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-Adimatic-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adizero",
+    "price": 310,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-Adizero-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-Adizero-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-Adizero-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-Adizero-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-Adizero-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-Adizero-image6.jpeg",
+    "image7": "assets/images/Adidas/Adidas-Adizero-image7.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adizero Adios 8",
+    "price": 220,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-AdizeroAdios8-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-AdizeroAdios8-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-AdizeroAdios8-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adizero Adios Pro",
+    "price": 330,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-AdizeroAdiosPro-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-AdizeroAdiosPro-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-AdizeroAdiosPro-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adizero Boston 11",
+    "price": 220,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-AdizeroBoston11-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-AdizeroBoston11-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-AdizeroBoston11-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-AdizeroBoston11-image4.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adizero Boston 12",
+    "price": 180,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-AdizeroBoston12-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-AdizeroBoston12-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-AdizeroBoston12-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-AdizeroBoston12-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-AdizeroBoston12-image5.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Adizero Evo SL Off",
+    "price": 330,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-AdizeroEvoSLOff-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-AdizeroEvoSLOff-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-AdizeroEvoSLOff-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Campus Luxo",
+    "price": 190,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-CampusLuxo-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-CampusLuxo-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-CampusLuxo-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-CampusLuxo-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-CampusLuxo-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-CampusLuxo-image6.jpeg",
+    "image7": "assets/images/Adidas/Adidas-CampusLuxo-image7.jpeg",
+    "image8": "assets/images/Adidas/Adidas-CampusLuxo-image8.jpeg",
+    "image9": "assets/images/Adidas/Adidas-CampusLuxo-image9.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Campus Premium",
+    "price": 240,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-CampusPremium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-CampusPremium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-CampusPremium-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-CampusPremium-image4.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Campus Super Premium",
+    "price": 270,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-CampusSuperPremium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-CampusSuperPremium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-CampusSuperPremium-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-CampusSuperPremium-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-CampusSuperPremium-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-CampusSuperPremium-image6.jpeg",
+    "image7": "assets/images/Adidas/Adidas-CampusSuperPremium-image7.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Falcon Premium",
+    "price": 180,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-FalconPremium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-FalconPremium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-FalconPremium-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-FalconPremium-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-FalconPremium-image5.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Fórum Bold",
+    "price": 180,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-FórumBold-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-FórumBold-image2.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Fórum Linha Luxo",
+    "price": 280,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-FórumLinhaLuxo-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-FórumLinhaLuxo-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-FórumLinhaLuxo-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Forum Low",
+    "price": 190,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-ForumLow-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-ForumLow-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-ForumLow-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-ForumLow-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-ForumLow-image5.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Galaxy 6",
+    "price": 175,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-Galaxy6-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-Galaxy6-image2.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Kinit",
+    "price": 220,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-Kinit-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-Kinit-image2.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Ladies Premium",
+    "price": 190,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-LadiesPremium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-LadiesPremium-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-LadiesPremium-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "NMD",
+    "price": 165,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-NMD-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-NMD-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-NMD-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-NMD-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-NMD-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-NMD-image6.jpeg",
+    "image7": "assets/images/Adidas/Adidas-NMD-image7.jpeg",
+    "image8": "assets/images/Adidas/Adidas-NMD-image8.jpeg",
+    "image9": "assets/images/Adidas/Adidas-NMD-image9.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Ohio Premium",
+    "price": 200,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-OhioPremium-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-OhioPremium-image2.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Ohio Trail",
+    "price": 200,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-OhioTrail-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-OhioTrail-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-OhioTrail-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-OhioTrail-image4.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Skate Osiris",
+    "price": 240,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-SkateOsiris-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-SkateOsiris-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-SkateOsiris-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "SL 7",
+    "price": 270,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-SL7-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-SL7-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-SL7-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "SL 72",
+    "price": 200,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-SL72-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-SL72-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-SL72-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-SL72-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-SL72-image5.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Space Casual",
+    "price": 200,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-SpaceCasual-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-SpaceCasual-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-SpaceCasual-image3.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Sport Feminino",
+    "price": 180,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-SportFeminino-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-SportFeminino-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-SportFeminino-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-SportFeminino-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-SportFeminino-image5.jpeg",
+    "image6": "assets/images/Adidas/Adidas-SportFeminino-image6.jpeg"
+  },
+  {
+    "brand": "Adidas",
+    "name": "Supersart",
+    "price": 190,
+    "sizes": "34 ao 43",
+    "image1": "assets/images/Adidas/Adidas-Supersart-image1.jpeg",
+    "image2": "assets/images/Adidas/Adidas-Supersart-image2.jpeg",
+    "image3": "assets/images/Adidas/Adidas-Supersart-image3.jpeg",
+    "image4": "assets/images/Adidas/Adidas-Supersart-image4.jpeg",
+    "image5": "assets/images/Adidas/Adidas-Supersart-image5.jpeg"
+  }
+]
