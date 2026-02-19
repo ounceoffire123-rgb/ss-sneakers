@@ -1,11 +1,11 @@
 /* =========================
-   SS Sneakers • Luxury Cosmic Gold
+   SS Sneakers • Luxury Cosmic Gold (FULL)
+   Compatível com app.js (cards + carousel)
    ========================= */
 
 :root{
   --bg:#05060a;
   --bg2:#070812;
-  --card:#0b0c12cc;
 
   --text:#f4f6ff;
   --muted:rgba(244,246,255,.72);
@@ -26,19 +26,22 @@
 html,body{ margin:0; padding:0; }
 a{ color:inherit; text-decoration:none; }
 .hidden{ display:none !important; }
+img{ max-width:100%; display:block; }
 
 body{
   min-height:100vh;
   color:var(--text);
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background: radial-gradient(1200px 700px at 20% -10%, rgba(231,195,112,.14), transparent 55%),
-              radial-gradient(900px 520px at 80% 10%, rgba(231,195,112,.09), transparent 55%),
-              radial-gradient(1200px 800px at 50% 120%, rgba(35,60,140,.12), transparent 60%),
-              linear-gradient(180deg, #04050a, #060713 45%, #03030a);
+  background:
+    radial-gradient(900px 500px at 18% 22%, rgba(231,195,112,.18), transparent 60%),
+    radial-gradient(700px 420px at 82% 30%, rgba(231,195,112,.10), transparent 58%),
+    radial-gradient(800px 520px at 60% 88%, rgba(231,195,112,.08), transparent 62%),
+    linear-gradient(180deg, #050608 0%, #07080b 35%, #040407 100%);
   overflow-x:hidden;
+  position:relative;
 }
 
-/* Cosmic dust overlay */
+/* Cosmic overlays */
 body::before{
   content:"";
   position:fixed;
@@ -54,7 +57,6 @@ body::before{
   opacity:.75;
   transform: rotate(-6deg);
 }
-
 body::after{
   content:"";
   position:fixed;
@@ -84,9 +86,9 @@ body::after{
   position:sticky;
   top:0;
   z-index:50;
-  background: linear-gradient(180deg, rgba(6,7,12,.92), rgba(6,7,12,.62));
-  backdrop-filter: blur(10px);
-  border-bottom:1px solid var(--line);
+  background: rgba(6,7,10,.70);
+  backdrop-filter: blur(14px);
+  border-bottom:1px solid rgba(231,195,112,.18);
 }
 
 .topbar__inner{
@@ -103,24 +105,15 @@ body::after{
   gap:12px;
 }
 
-/* LOGO (sem sombra/fundo) */
+/* LOGO (sem sombra quadrada) */
 .brand__logo{
   width:58px;
   height:58px;
   object-fit:contain;
-  border-radius:0;
   background:transparent !important;
+  border-radius:999px;
   box-shadow:none !important;
-  filter:none !important;
-}
-
-.brand__logo::before,
-.brand__logo::after,
-.brand::before,
-.brand::after{
-  content:none !important;
-  box-shadow:none !important;
-  filter:none !important;
+  filter: drop-shadow(0 10px 28px rgba(231,195,112,.18));
 }
 
 .brand__name{
@@ -153,14 +146,13 @@ body::after{
   font-size:14px;
   letter-spacing:.2px;
   border:1px solid rgba(231,195,112,.22);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease, filter .18s ease;
 }
 
 .btn--ghost{
   background: rgba(10,10,14,.35);
   color: rgba(244,246,255,.88);
 }
-
 .btn--ghost:hover{
   transform: translateY(-1px);
   border-color: rgba(231,195,112,.42);
@@ -171,11 +163,11 @@ body::after{
   background: linear-gradient(135deg, var(--gold), var(--gold2));
   color: #0b0c10;
   border-color: transparent;
-  box-shadow: 0 12px 30px rgba(231,195,112,.14);
+  box-shadow: 0 12px 30px rgba(231,195,112,.18);
 }
-
 .btn--primary:hover{
   transform: translateY(-1px);
+  filter: brightness(1.05);
   box-shadow:
     0 0 0 3px rgba(231,195,112,.16),
     0 22px 55px rgba(0,0,0,.55);
@@ -184,9 +176,7 @@ body::after{
 /* =========================
    HERO
    ========================= */
-.hero{
-  padding:30px 0 10px;
-}
+.hero{ padding:30px 0 10px; }
 
 .hero__card{
   display:grid;
@@ -196,12 +186,13 @@ body::after{
   border-radius:var(--r2);
   background: linear-gradient(180deg, rgba(18,18,22,.68), rgba(10,10,14,.58));
   border:1px solid rgba(231,195,112,.18);
-  box-shadow: 0 30px 90px rgba(0,0,0,.55);
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.65),
+    0 0 0 1px rgba(231,195,112,.08) inset;
   position:relative;
   overflow:hidden;
 }
 
-/* subtle gold edge glow */
 .hero__card::before{
   content:"";
   position:absolute;
@@ -272,21 +263,19 @@ body::after{
   margin:0 0 6px;
 }
 
-/* Input + Select premium */
 .input, .select{
   width:100%;
   height:44px;
   padding:0 14px;
   border-radius:14px;
   border:1px solid rgba(231,195,112,.22);
-  background: rgba(10,10,14,.55);
+  background: rgba(10,12,16,.55);
   color: rgba(244,246,255,.92);
   box-shadow:
-    0 0 0 1px rgba(231,195,112,.08) inset,
+    0 0 0 1px rgba(231,195,112,.06) inset,
     0 12px 30px rgba(0,0,0,.35);
   transition: box-shadow .18s ease, border-color .18s ease, transform .18s ease;
 }
-
 .input::placeholder{ color: rgba(244,246,255,.45); }
 
 .input:focus, .select:focus{
@@ -296,6 +285,7 @@ body::after{
     0 0 0 1px rgba(231,195,112,.18) inset,
     0 0 0 3px rgba(231,195,112,.12),
     0 18px 45px rgba(0,0,0,.45);
+  transform: translateY(-1px);
 }
 
 /* select arrow */
@@ -314,7 +304,7 @@ body::after{
   background-repeat:no-repeat;
 }
 
-/* tenta deixar o dropdown menos "Windows cinza" (não é 100% garantido) */
+/* melhora o menu do select quando o browser permite */
 .select option{
   background:#0b0c10;
   color:#f2f2f2;
@@ -336,7 +326,6 @@ body::after{
   background: rgba(12,14,20,.55);
   color: rgba(244,246,255,.78);
 }
-
 .notice b{ color: rgba(231,195,112,.92); }
 
 .dot{
@@ -369,7 +358,6 @@ body::after{
   gap:10px;
 }
 
-/* pills (botões dourados com glow + hover suave) */
 .pill{
   appearance:none;
   border:1px solid rgba(231,195,112,.20);
@@ -393,7 +381,7 @@ body::after{
     0 18px 45px rgba(0,0,0,.55);
 }
 
-.pill.is-active{
+.pill--active{
   background: linear-gradient(135deg, rgba(231,195,112,.95), rgba(201,154,58,.95));
   color:#0b0c10;
   border-color: transparent;
@@ -411,9 +399,7 @@ body::after{
   margin-top:16px;
 }
 
-.section{
-  margin-top:26px;
-}
+.section{ margin-top:26px; }
 
 .section__head{
   display:flex;
@@ -446,7 +432,9 @@ body::after{
   overflow:hidden;
   border:1px solid rgba(231,195,112,.16);
   background: rgba(10,10,14,.38);
-  box-shadow: 0 18px 55px rgba(0,0,0,.45);
+  box-shadow:
+    0 18px 55px rgba(0,0,0,.45),
+    0 0 0 1px rgba(231,195,112,.06) inset;
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
@@ -456,14 +444,109 @@ body::after{
   box-shadow: 0 28px 80px rgba(0,0,0,.60);
 }
 
-.card__img{
-  width:100%;
-  aspect-ratio: 4 / 3;
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.00));
-  display:block;
-  object-fit: cover;
+/* --- CARROSSEL (fica dentro do card) --- */
+.card__media{
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(0,0,0,.25);
+  border: 1px solid rgba(231,195,112,.12);
+  margin: 12px 12px 0;
 }
 
+.carousel{ position: relative; }
+
+.carousel__track{
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.carousel__track::-webkit-scrollbar{ display:none; }
+
+.carousel__slide{
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  aspect-ratio: 1 / 1;
+  background: radial-gradient(120% 120% at 50% 30%, rgba(231,195,112,.10), rgba(0,0,0,.35));
+}
+
+.carousel__slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.01);
+}
+
+/* setas */
+.carousel__nav{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+
+.carousel__btn{
+  pointer-events:auto;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  border:1px solid rgba(231,195,112,.25);
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(8px);
+  display:grid;
+  place-items:center;
+  color: rgba(231,195,112,.95);
+  cursor:pointer;
+  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+  opacity:.92;
+}
+
+.carousel__btn:hover{
+  transform: translateY(-50%) scale(1.04);
+  box-shadow: 0 0 0 3px rgba(231,195,112,.10), 0 12px 30px rgba(0,0,0,.35);
+}
+.carousel__btn:active{ transform: translateY(-50%) scale(.98); }
+
+.carousel__btn--prev{ left: 10px; }
+.carousel__btn--next{ right: 10px; }
+.carousel__btn svg{ width:18px; height:18px; }
+
+/* bolinhas */
+.carousel__dots{
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  pointer-events:auto;
+}
+.carousel__dot{
+  width:8px;
+  height:8px;
+  border-radius:999px;
+  border:1px solid rgba(231,195,112,.35);
+  background: rgba(0,0,0,.35);
+  cursor:pointer;
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+}
+.carousel__dot.is-active{
+  background: rgba(231,195,112,.95);
+  box-shadow: 0 0 14px rgba(231,195,112,.35);
+  transform: scale(1.15);
+}
+.carousel.is-single .carousel__nav,
+.carousel.is-single .carousel__dots{ display:none; }
+
+/* card body compatível com app.js */
 .card__body{
   padding:14px 14px 16px;
 }
@@ -482,23 +565,26 @@ body::after{
   margin-bottom:8px;
 }
 
-.card__name{
+/* app.js usa card__title + card__meta */
+.card__title{
+  margin:0 0 6px;
   font-weight:1000;
   letter-spacing:.2px;
-  margin:0 0 6px;
+  font-size:16px;
 }
 
-.card__sizes{
+.card__meta{
   color: rgba(244,246,255,.66);
   font-size:12px;
   margin:0 0 10px;
 }
 
-.card__row{
+.card__priceRow{
   display:flex;
-  align-items:center;
+  align-items:baseline;
   justify-content:space-between;
   gap:10px;
+  margin-bottom:10px;
 }
 
 .card__price{
@@ -506,8 +592,26 @@ body::after{
   color: rgba(231,195,112,.95);
   font-size:16px;
 }
+.card__sizes{
+  color: rgba(244,246,255,.55);
+  font-size:12px;
+}
 
-.card__cta{
+.card__desc{
+  margin:0 0 12px;
+  color: rgba(244,246,255,.70);
+  font-size:12.5px;
+  line-height:1.35;
+}
+
+/* botões do card (app.js usa smallbtn / smallbtn--wa) */
+.card__actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.smallbtn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -518,13 +622,24 @@ body::after{
   letter-spacing:.2px;
   border:1px solid rgba(231,195,112,.22);
   background: rgba(10,10,14,.35);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease;
 }
 
-.card__cta:hover{
+.smallbtn:hover{
   transform: translateY(-1px);
   border-color: rgba(231,195,112,.55);
   box-shadow: 0 0 0 3px rgba(231,195,112,.12);
+}
+
+.smallbtn--wa{
+  background: linear-gradient(135deg, rgba(231,195,112,.95), rgba(201,154,58,.95));
+  color:#0b0c10;
+  border-color: transparent;
+  box-shadow: 0 12px 30px rgba(231,195,112,.14);
+}
+.smallbtn--wa:hover{
+  filter: brightness(1.05);
+  box-shadow: 0 0 0 3px rgba(231,195,112,.16), 0 22px 55px rgba(0,0,0,.55);
 }
 
 .empty{
@@ -554,6 +669,7 @@ body::after{
   border:1px solid rgba(231,195,112,.22);
   background: rgba(10,10,14,.45);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  box-shadow: 0 16px 40px rgba(0,0,0,.55), 0 0 24px rgba(231,195,112,.12);
 }
 
 .fab:hover{
@@ -604,233 +720,5 @@ body::after{
   .grid{ grid-template-columns:1fr; }
   .brand__logo{ width:52px; height:52px; }
   .btn{ padding:10px 12px; }
+  .carousel__btn{ width:34px; height:34px; }
 }
-/* ===== LUX BOOST (cole no final do styles.css) ===== */
-
-/* Fundo cosmico dourado */
-body{
-  background:
-    radial-gradient(900px 500px at 18% 22%, rgba(231,195,112,.18), transparent 60%),
-    radial-gradient(700px 420px at 82% 30%, rgba(231,195,112,.10), transparent 58%),
-    radial-gradient(800px 520px at 60% 88%, rgba(231,195,112,.08), transparent 62%),
-    linear-gradient(180deg, #050608 0%, #07080b 35%, #040407 100%);
-  position: relative;
-}
-
-/* “Partículas” sutis (sem imagem) */
-body::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .55;
-  background:
-    radial-gradient(circle at 12% 22%, rgba(231,195,112,.25) 0 1px, transparent 2px),
-    radial-gradient(circle at 25% 55%, rgba(231,195,112,.18) 0 1px, transparent 2px),
-    radial-gradient(circle at 68% 30%, rgba(231,195,112,.20) 0 1px, transparent 2px),
-    radial-gradient(circle at 78% 70%, rgba(231,195,112,.16) 0 1px, transparent 2px),
-    radial-gradient(circle at 45% 82%, rgba(231,195,112,.14) 0 1px, transparent 2px);
-  filter: blur(.2px);
-}
-
-/* Topbar mais “grife” */
-.topbar{
-  background: rgba(6,7,10,.70);
-  border-bottom: 1px solid rgba(231,195,112,.18);
-  backdrop-filter: blur(14px);
-}
-
-/* Logo sem sombra/quadriculado */
-.brand__logo{
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  border-radius: 999px !important;
-  filter: drop-shadow(0 10px 28px rgba(231,195,112,.18));
-}
-
-/* Card principal com borda “neon dourada” */
-.hero__card, .heroCard, .card, .controls, .notice{
-  border: 1px solid rgba(231,195,112,.18) !important;
-  box-shadow:
-    0 18px 60px rgba(0,0,0,.65),
-    0 0 0 1px rgba(231,195,112,.08) inset;
-}
-
-/* Inputs/select com glow */
-.input, .select{
-  background: rgba(10,12,16,.55) !important;
-  border: 1px solid rgba(231,195,112,.22) !important;
-  box-shadow: 0 0 0 1px rgba(231,195,112,.06) inset;
-  transition: box-shadow .18s ease, transform .18s ease, border-color .18s ease;
-}
-.input:focus, .select:focus{
-  outline: none;
-  border-color: rgba(231,195,112,.45) !important;
-  box-shadow:
-    0 0 0 1px rgba(231,195,112,.20) inset,
-    0 0 24px rgba(231,195,112,.16);
-  transform: translateY(-1px);
-}
-
-/* Botões premium */
-.btn, .btn--primary, .btn--ghost{
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
-}
-.btn--primary{
-  box-shadow: 0 12px 30px rgba(231,195,112,.18);
-}
-.btn:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 14px 36px rgba(231,195,112,.18);
-  filter: brightness(1.05);
-}
-
-/* Marcas como botões dourados com glow + hover suave */
-.brandnav__row .pill, .brandnav__row button, #brandPills button, #brandPills .pill{
-  border: 1px solid rgba(231,195,112,.24) !important;
-  background: rgba(10,12,16,.45) !important;
-  box-shadow:
-    0 0 0 1px rgba(231,195,112,.06) inset;
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-.brandnav__row .pill:hover, #brandPills button:hover{
-  transform: translateY(-1px);
-  border-color: rgba(231,195,112,.45) !important;
-  box-shadow:
-    0 0 0 1px rgba(231,195,112,.14) inset,
-    0 0 26px rgba(231,195,112,.14);
-}
-
-/* “Selecionado” mais evidente */
-.brandnav__row .is-active, #brandPills .active, #brandPills button[aria-pressed="true"]{
-  background: linear-gradient(135deg, rgba(231,195,112,.24), rgba(231,195,112,.08)) !important;
-  border-color: rgba(231,195,112,.55) !important;
-  box-shadow: 0 0 28px rgba(231,195,112,.18);
-}
-
-/* FAB mais luxuoso */
-.fab{
-  border: 1px solid rgba(231,195,112,.22) !important;
-  box-shadow: 0 16px 40px rgba(0,0,0,.55), 0 0 24px rgba(231,195,112,.12);
-}
-/* =========================
-   CARROSSEL DE IMAGENS (cards)
-   ========================= */
-
-.card__media{
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  background: rgba(0,0,0,.25);
-  border: 1px solid rgba(231,195,112,.12);
-}
-
-.carousel{
-  position: relative;
-}
-
-.carousel__track{
-  display: flex;
-  width: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.carousel__track::-webkit-scrollbar{ display:none; }
-
-.carousel__slide{
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  position: relative;
-  aspect-ratio: 1 / 1;  /* quadrado bonito */
-  background: radial-gradient(120% 120% at 50% 30%, rgba(231,195,112,.10), rgba(0,0,0,.35));
-}
-
-.carousel__slide img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transform: scale(1.01);
-}
-
-/* setas */
-.carousel__nav{
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.carousel__btn{
-  pointer-events: auto;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(231,195,112,.25);
-  background: rgba(0,0,0,.35);
-  backdrop-filter: blur(8px);
-  display: grid;
-  place-items: center;
-  color: rgba(231,195,112,.95);
-  cursor: pointer;
-  transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
-  opacity: .92;
-}
-.carousel__btn:hover{
-  transform: translateY(-50%) scale(1.04);
-  box-shadow: 0 0 0 3px rgba(231,195,112,.10), 0 12px 30px rgba(0,0,0,.35);
-}
-.carousel__btn:active{
-  transform: translateY(-50%) scale(.98);
-}
-.carousel__btn--prev{ left: 10px; }
-.carousel__btn--next{ right: 10px; }
-
-.carousel__btn svg{ width: 18px; height: 18px; }
-
-/* bolinhas */
-.carousel__dots{
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  pointer-events: auto;
-}
-.carousel__dot{
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(231,195,112,.35);
-  background: rgba(0,0,0,.35);
-  cursor: pointer;
-  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
-}
-.carousel__dot.is-active{
-  background: rgba(231,195,112,.95);
-  box-shadow: 0 0 14px rgba(231,195,112,.35);
-  transform: scale(1.15);
-}
-
-/* se tiver só 1 imagem, esconde nav/dots */
-.carousel.is-single .carousel__nav,
-.carousel.is-single .carousel__dots{
-  display: none;
-}
-
-/* mobile: setas menores */
-@media (max-width: 520px){
-  .carousel__btn{
-    width: 34px;
-    height: 34px;
-  }
-}
-
